@@ -83,7 +83,7 @@ def flip_labels(dataset, flip_percentage=0.2, source_class=5, target_class=3):
 
 # Apply label flipping to training and testing datasets
 flip_labels(train_dataset)
-flip_labels(test_dataset)
+#flip_labels(test_dataset)
 
 # Save Processed Dataset
 with open("train_data_loader.pickle", 'wb') as f:
