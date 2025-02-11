@@ -68,7 +68,7 @@ train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download
 test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
 
 # Label Flipping: 20% of Class 5 → Class 3
-def flip_labels(dataset, flip_percentage=0.2, source_class=5, target_class=3):
+def flip_labels(dataset, flip_percentage=1.0, source_class=5, target_class=3):
     targets = np.array(dataset.targets)
     class_5_indices = np.where(targets == source_class)[0]
     num_to_flip = int(len(class_5_indices) * flip_percentage)
